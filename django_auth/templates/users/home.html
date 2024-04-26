@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            body {
+                color: green;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello, {{ user.username|default:'Guest'}}</h1>
+        <p>Welcome to the our site</p>
+        {% if user.is_authenticated%}
+            <form id="logout-form" method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </body>
+</html>
