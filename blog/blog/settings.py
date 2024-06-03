@@ -12,17 +12,16 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-from django.contrib.messages import constants as messages 
+from django.contrib.messages import constants as messages
 
- 
 
-MESSAGE_TAGS = { 
-    messages.DEBUG: 'alert-secondary', 
-    messages.INFO: 'alert-info', 
-    messages.SUCCESS: 'alert-success', 
-    messages.WARNING: 'alert-warning', 
-    messages.ERROR: 'alert-danger', 
-} 
+MESSAGE_TAGS = {
+    messages.DEBUG: "alert-secondary",
+    messages.INFO: "alert-info",
+    messages.SUCCESS: "alert-success",
+    messages.WARNING: "alert-warning",
+    messages.ERROR: "alert-danger",
+}
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,7 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-cqjzz#^er*tc-qvded1m%s-k@m2+jt1!m-ra^5i3c2t^e)8gqq"
+SECRET_KEY = (
+    "django-insecure-cqjzz#^er*tc-qvded1m%s-k@m2+jt1!m-ra^5i3c2t^e)8gqq"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -49,7 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    'en_blog'
+    "en_blog",
 ]
 
 MIDDLEWARE = [
@@ -64,12 +65,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "blog.urls"
 
-TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIRS = os.path.join(BASE_DIR, "templates")
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [TEMPLATES_DIRS], 
+        "DIRS": [TEMPLATES_DIRS],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -82,13 +83,13 @@ TEMPLATES = [
     },
 ]
 
-REST_FRAMEWORK = { 
-  # Use Django's standard `django.contrib.auth` permissions, 
-  # or allow read-only access for unauthenticated users. 
-  'DEFAULT_PERMISSION_CLASSES': [ 
-    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly' 
-  ]
-} 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
 
 WSGI_APPLICATION = "blog.wsgi.application"
 

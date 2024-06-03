@@ -17,6 +17,5 @@ class Book(models.Model):
     year = models.DateField()
     pages_count = models.IntegerField()
 
-
     def __str__(self):
         return f"{self.title}"

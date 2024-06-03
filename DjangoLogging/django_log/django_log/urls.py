@@ -21,5 +21,5 @@ from log.views import my_view, home_view
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", include("log.urls")),
-    path("",home_view, name="welcome")
+    path("", home_view, name="welcome"),
 ]

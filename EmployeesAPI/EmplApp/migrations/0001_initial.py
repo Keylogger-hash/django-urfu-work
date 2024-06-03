@@ -13,14 +13,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Department",
             fields=[
-                ("DepartmentId", models.AutoField(primary_key=True, serialize=False)),
+                (
+                    "DepartmentId",
+                    models.AutoField(primary_key=True, serialize=False),
+                ),
                 ("DepartmentName", models.CharField(max_length=255)),
             ],
         ),
         migrations.CreateModel(
             name="Employees",
             fields=[
-                ("EmployeeId", models.AutoField(primary_key=True, serialize=False)),
+                (
+                    "EmployeeId",
+                    models.AutoField(primary_key=True, serialize=False),
+                ),
                 ("EmployeeName", models.CharField(max_length=500)),
                 ("Department", models.CharField(max_length=500)),
                 ("DateOfJoining", models.DateField()),

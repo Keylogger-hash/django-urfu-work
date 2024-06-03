@@ -1,15 +1,20 @@
 from rest_framework import serializers
-from .models import Departments,Employees
+from .models import Departments, Employees
+
 
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Departments
-        fields = ('DepartmentId','DepartmentName')
+        fields = ("DepartmentId", "DepartmentName")
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employees
-        fields = ('EmployeeId','EmployeeName','Department','DateOfJoining','PhotoFileName')
-
-    
+        fields = (
+            "EmployeeId",
+            "EmployeeName",
+            "Department",
+            "DateOfJoining",
+            "PhotoFileName",
+        )

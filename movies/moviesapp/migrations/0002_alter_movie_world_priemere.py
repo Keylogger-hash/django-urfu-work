@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="movie",
             name="world_priemere",
-            field=models.DateField(default=2019, verbose_name="Премьера в мире"),
+            field=models.DateField(
+                default=2019, verbose_name="Премьера в мире"
+            ),
         ),
     ]

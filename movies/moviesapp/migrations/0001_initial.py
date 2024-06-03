@@ -24,11 +24,16 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("name", models.CharField(max_length=255, verbose_name="Имя")),
-                ("age", models.IntegerField(default=0, verbose_name="Возраст")),
+                (
+                    "age",
+                    models.IntegerField(default=0, verbose_name="Возраст"),
+                ),
                 ("description", models.TextField(verbose_name="Описание")),
                 (
                     "image",
-                    models.ImageField(upload_to="actors/", verbose_name="Изображение"),
+                    models.ImageField(
+                        upload_to="actors/", verbose_name="Изображение"
+                    ),
                 ),
             ],
             options={
@@ -48,7 +53,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=255, verbose_name="Категория")),
+                (
+                    "name",
+                    models.CharField(max_length=255, verbose_name="Категория"),
+                ),
                 ("description", models.TextField(verbose_name="Описание")),
                 ("url", models.SlugField(max_length=160, unique=True)),
             ],
@@ -90,7 +98,12 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("value", models.SmallIntegerField(default=0, verbose_name="Значение")),
+                (
+                    "value",
+                    models.SmallIntegerField(
+                        default=0, verbose_name="Значение"
+                    ),
+                ),
             ],
             options={
                 "verbose_name": "Звезда рейтинга",
@@ -110,15 +123,22 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("title", models.CharField(max_length=160, verbose_name="Название")),
+                (
+                    "title",
+                    models.CharField(max_length=160, verbose_name="Название"),
+                ),
                 (
                     "tagline",
-                    models.CharField(default="", max_length=100, verbose_name="Слоган"),
+                    models.CharField(
+                        default="", max_length=100, verbose_name="Слоган"
+                    ),
                 ),
                 ("description", models.TextField(verbose_name="Описание")),
                 (
                     "poster",
-                    models.ImageField(upload_to="movies/", verbose_name="Постер"),
+                    models.ImageField(
+                        upload_to="movies/", verbose_name="Постер"
+                    ),
                 ),
                 (
                     "year",
@@ -126,7 +146,10 @@ class Migration(migrations.Migration):
                         default=2019, verbose_name="Дата выхода"
                     ),
                 ),
-                ("country", models.CharField(max_length=30, verbose_name="Страна")),
+                (
+                    "country",
+                    models.CharField(max_length=30, verbose_name="Страна"),
+                ),
                 (
                     "world_priemere",
                     models.DateField(default=2019, verbose_name="Дата выхода"),
@@ -156,7 +179,12 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("url", models.SlugField(default=True, max_length=130)),
-                ("draft", models.BooleanField(default=False, verbose_name="Черновик")),
+                (
+                    "draft",
+                    models.BooleanField(
+                        default=False, verbose_name="Черновик"
+                    ),
+                ),
                 (
                     "actors",
                     models.ManyToManyField(
@@ -208,7 +236,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("title", models.CharField(max_length=160, verbose_name="Заголовок")),
+                (
+                    "title",
+                    models.CharField(max_length=160, verbose_name="Заголовок"),
+                ),
                 ("description", models.TextField(verbose_name="Описание")),
                 (
                     "image",
@@ -242,7 +273,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("ip", models.CharField(max_length=15, verbose_name="IP адреса")),
+                (
+                    "ip",
+                    models.CharField(max_length=15, verbose_name="IP адреса"),
+                ),
                 (
                     "movie",
                     models.ForeignKey(
@@ -280,7 +314,12 @@ class Migration(migrations.Migration):
                 ),
                 ("email", models.EmailField(max_length=254)),
                 ("name", models.CharField(max_length=100, verbose_name="Имя")),
-                ("text", models.TextField(max_length=5000, verbose_name="Сообщение")),
+                (
+                    "text",
+                    models.TextField(
+                        max_length=5000, verbose_name="Сообщение"
+                    ),
+                ),
                 (
                     "movie",
                     models.ForeignKey(

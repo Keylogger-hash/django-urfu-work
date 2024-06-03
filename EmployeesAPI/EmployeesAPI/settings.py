@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5#pf*u)mk(e-pa$34gjtm1g@apwzzu!a#ivwp73lt0t!7ewi82"
+SECRET_KEY = (
+    "django-insecure-5#pf*u)mk(e-pa$34gjtm1g@apwzzu!a#ivwp73lt0t!7ewi82"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,15 +40,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'rest_framework',
-    'corsheaders',
-    'EmplApp.apps.EmplappConfig'
+    "rest_framework",
+    "corsheaders",
+    "EmplApp.apps.EmplappConfig",
 ]
 
-CORS_ORIGIN_ALLOW_ALL=True 
-CORS_ALLOWED_ORIGINS= [ 
- 'http://localhost:3030', 
-] 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3030",
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -55,7 +58,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware'
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "EmployeesAPI.urls"
@@ -131,16 +134,14 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
- 
 
-BASE_DIR=Path(__file__).resolve(strict=True).parent.parent 
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-MEDIA_URL='/Photos/' 
+MEDIA_URL = "/Photos/"
 
-MEDIA_ROOT=os.path.join(BASE_DIR,'Photos') 
+MEDIA_ROOT = os.path.join(BASE_DIR, "Photos")
 
- 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'. 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-BASE_DIR=Path(__file__).resolve().parent.parent 
+BASE_DIR = Path(__file__).resolve().parent.parent

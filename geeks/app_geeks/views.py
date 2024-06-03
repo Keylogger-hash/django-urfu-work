@@ -1,28 +1,25 @@
 from django.shortcuts import render
 
 # Create your views here.
-# import Http Response from django 
+# import Http Response from django
 
-from django.shortcuts import render 
+from django.shortcuts import render
 
-   
 
-# create a function 
+# create a function
 
-def geeks_view(request): 
 
-    # create a dictionary to pass 
+def geeks_view(request):
 
-    # data to the template 
+    # create a dictionary to pass
 
-    context ={ 
+    # data to the template
 
-        "data":"Gfg is the best", 
+    context = {
+        "data": "Gfg is the best",
+        "list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    }
 
-        "list":[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+    # return response with template and context
 
-    } 
-
-    # return response with template and context 
-
-    return render(request, "geeks.html", context) 
+    return render(request, "geeks.html", context)

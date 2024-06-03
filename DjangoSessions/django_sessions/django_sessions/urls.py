@@ -20,7 +20,7 @@ from mysessions.views import (
     cookie_session,
     create_session,
     access_session,
-    delete_session
+    delete_session,
 )
 
 urlpatterns = [
@@ -29,5 +29,5 @@ urlpatterns = [
     path("deletecookie/", cookie_delete),
     path("create/", create_session),
     path("access/", access_session),
-    path('delete/', delete_session)
+    path("delete/", delete_session),
 ]

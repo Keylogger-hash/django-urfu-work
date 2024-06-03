@@ -20,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-pt1kl#@&dqx@7(q&$r@cz##j@57o&7kr26j6ce#(u0r1=l@p#t"
+SECRET_KEY = (
+    "django-insecure-pt1kl#@&dqx@7(q&$r@cz##j@57o&7kr26j6ce#(u0r1=l@p#t"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,38 +39,36 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "log"
+    "log",
 ]
 
-LOGGING = { 
-  'version': 1, 
-  'disable_existing_loggers': False,
-  'formatters': {
-      'verbose':{
-          'format': '%(levelname)s %(asctime) %(module)s %(process)d %(thread)d %(message)s'
-      },
-      'simple':{
-          'format': '%(levelname)s %(message)s'
-      }
-  }, 
-  'handlers': { 
-    'console': {
-      'level': 'DEBUG',
-      'class': 'logging.StreamHandler',
-      'formatter': 'simple'
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "%(levelname)s %(asctime) %(module)s %(process)d %(thread)d %(message)s"
+        },
+        "simple": {"format": "%(levelname)s %(message)s"},
     },
-    'file': { 
-      'level': 'WARNING',
-      'class': 'logging.FileHandler',
-      'filename': BASE_DIR / 'warning.log'
-    }, 
-  }, 
-  'root': { 
-    'handlers': ['file', 'console'], 
-    'level': 'INFO', 
-    'propagate': True
-  }
-} 
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+        },
+        "file": {
+            "level": "WARNING",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "warning.log",
+        },
+    },
+    "root": {
+        "handlers": ["file", "console"],
+        "level": "INFO",
+        "propagate": True,
+    },
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
